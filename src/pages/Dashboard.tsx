@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   Users, 
@@ -10,7 +10,8 @@ import {
   LayoutDashboard,
   Search,
   MoreVertical,
-  Plus
+  Plus,
+  Loader2
 } from 'lucide-react';
 import EnrollStudentModal from '../components/EnrollStudentModal';
 
@@ -18,6 +19,27 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('ch_user') || '{}');
   const [isEnrollModalOpen, setIsEnrollModalOpen] = useState(false);
+  const [students, setStudents] = useState<any[]>([]);
+  const [isLoadingStudents, setIsLoadingStudents] = useState(true);
+
+  const fetchStudents = async () => {
+    try {
+      const API_BASE = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${API_BASE}/academic/students`);
+      if (response.ok) {
+        const data = await response.json();
+        setStudents(data.students || []);
+      }
+    } catch (error) {
+      console.error('Erro ao buscar matrículas recentes', error);
+    } finally {
+      setIsLoadingStudents(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchStudents();
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('ch_token');
@@ -163,24 +185,35 @@ export default function Dashboard() {
               </div>
               
               <div className="space-y-4">
-                {[1, 2, 3, 4].map((item) => (
-                  <div key={item} className="flex items-center justify-between p-4 rounded-xl bg-slate-900/50 border border-slate-800/50 hover:bg-slate-800/80 transition-colors cursor-pointer">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 text-indigo-400 font-medium border border-slate-700">
-                        A
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-slate-200">Aluno Exemplo {item}</p>
-                        <p className="text-xs text-slate-500">10º Ano - Ciências e Tecnologias</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="inline-block px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                        Matriculado
-                      </span>
-                    </div>
+                {isLoadingStudents ? (
+                  <div className="flex justify-center p-8 text-indigo-400">
+                    <Loader2 className="animate-spin mr-2" size={24} /> A carregar matrículas...
                   </div>
-                ))}
+                ) : students.length === 0 ? (
+                  <div className="text-center p-8 text-slate-500 bg-slate-900/30 rounded-xl border border-slate-800/50">
+                    Não há matrículas recentes.
+                  </div>
+                ) : (
+                  students.map((student) => (
+                    <div key={student.id} className="flex items-center justify-between p-4 rounded-xl bg-slate-900/50 border border-slate-800/50 hover:bg-slate-800/80 transition-colors cursor-pointer">
+                      <div className="flex items-center">
+                        <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mr-4 text-indigo-400 font-medium border border-slate-700">
+                          {student.first_name.charAt(0).toUpperCase()}
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-slate-200">{student.first_name} {student.last_name}</p>
+                          <p className="text-xs text-slate-500">{student.grade_level} - {student.academic_year}</p>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <span className="inline-block px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                          Matriculado
+                        </span>
+                        <p className="text-[10px] text-slate-600 mt-1">{new Date(student.created_at).toLocaleDateString('pt-PT')}</p>
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
 
