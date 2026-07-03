@@ -36,7 +36,8 @@ export default function EnrollStudentModal({ isOpen, onClose, onSuccess }: Enrol
     setSuccess('');
 
     try {
-      const response = await fetch('/academic/students/enroll', {
+      const API_BASE = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${API_BASE}/academic/students/enroll`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
