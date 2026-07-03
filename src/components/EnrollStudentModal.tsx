@@ -27,9 +27,10 @@ export default function EnrollStudentModal({ isOpen, onClose, onSuccess }: Enrol
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.submitter?.blur();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const nativeEvent = e.nativeEvent as SubmitEvent;
+    nativeEvent.submitter?.blur();
     setIsLoading(true);
     setError('');
     setSuccess('');
