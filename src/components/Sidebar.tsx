@@ -1,10 +1,10 @@
 import { 
   Users, 
-  GraduationCap, 
   CreditCard, 
   FileText, 
   LogOut, 
-  LayoutDashboard
+  LayoutDashboard,
+  GraduationCap
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,8 +28,8 @@ export default function Sidebar() {
   return (
     <aside className="w-64 border-r border-slate-800 bg-slate-900/50 flex flex-col backdrop-blur-xl">
       <div className="h-16 flex items-center px-6 border-b border-slate-800">
-        <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 shadow-lg shadow-indigo-500/20">
-          <GraduationCap size={18} className="text-white" />
+        <div className="w-8 h-8 flex items-center justify-center mr-3">
+          <img src="/logo.png" alt="Colégio Henriques Logo" className="w-full h-full object-contain" />
         </div>
         <span className="font-bold text-lg text-white tracking-wide">C. Henriques</span>
       </div>

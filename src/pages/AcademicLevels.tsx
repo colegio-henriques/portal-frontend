@@ -96,7 +96,7 @@ export default function AcademicLevels() {
 {/*  Featured Curriculum Image (Editorial Feel)  */}
 <section className="mt-24">
 <div className="relative overflow-hidden rounded-xl aspect-[21/9]">
-<img className="w-full h-full object-cover" data-alt="A bright and airy classroom scene in an elite academic institution. Natural sunlight pours through large windows onto modern minimalist furniture. A small group of diverse students in professional school uniforms are engaged in a collaborative project using high-end technology and traditional books. The color palette is dominated by professional navy and warm gold accents, reflecting a sense of stability, focus, and premium educational quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDB2NgFKYmBU7BDEH-dSwvmT_Ij6sfGcH7K58EogLQEI7rIqwtHaq3jfwxZuvs7ItklSD7Pflumqc2qE-jvaPl6tqrfnQ3lvTdqEeybSZfqtEKWKhLtJjfveRDC4St4lQennQrnnDtwl-NqjimEWH8EEaGjeIbGgosQOrh6Zcip7Yw4vYo_Q39_BQV5oaoCFTn3r2HlwR9Jzh93zF5YtTUpnaocEKBoS0yqyB7oc2lto55hZrsF5Q2"/>
+<img className="w-full h-full object-cover" data-alt="A bright and airy classroom scene in an elite academic institution. Natural sunlight pours through large windows onto modern minimalist furniture. A small group of diverse students in professional school uniforms are engaged in a collaborative project using high-end technology and traditional books. The color palette is dominated by professional navy and warm gold accents, reflecting a sense of stability, focus, and premium educational quality." src="/logo.png"/>
 <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent flex items-center px-12">
 <div className="max-w-md text-on-primary">
 <h2 className="font-headline-lg text-headline-lg mb-4">Nossa Metodologia</h2>

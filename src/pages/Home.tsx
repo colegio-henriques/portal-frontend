@@ -10,7 +10,7 @@ export default function Home() {
 <header className="docked full-width top-0 sticky z-50 bg-surface border-b border-outline-variant">
 <div className="max-w-container-max-width mx-auto flex justify-between items-center px-6 md:px-margin-desktop py-4">
 <div className="flex items-center gap-4">
-<img alt="Colégio Henriques Logo" className="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj9jnKuxjJdvYljhFzwm1cgyMJM33KYSrnI5XhwOxCjvJ_rHL8Xdrp0733c_mWwxB2xjm60bJdD09wj7TLBf4vnZUpNbnV0h9o5CfwSjYZMR6tInXxOMCIyTyEnn7C4quwdHcjpR1wC8Jdu7OUmqWG69SbBLtFxTVpjHMAYwMyq18djh4c7LPJN5akCys17yBkfxi9MZYjKpCByiWx4ZueqMDRlXvVMJ3171X3Rq56OZrEANdjYat74oxIUfmPR5AkGg"/>
+<img alt="Colégio Henriques Logo" className="h-10 w-auto" src="/logo.png"/>
 <span className="font-display-lg text-headline-md font-bold text-primary hidden sm:block">Colégio Henriques</span>
 </div>
 <nav className="hidden lg:flex items-center gap-8">
@@ -37,7 +37,7 @@ export default function Home() {
 {/*  Background Image with Overlay  */}
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
-<img className="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a bright, contemporary classroom at Colégio Henriques. Students are engaged in a collaborative project using high-end laptops and tactile learning tools. The architecture features large floor-to-ceiling windows letting in soft, natural daylight. The atmosphere is academic, professional, and inspiring, with a clean corporate aesthetic and high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsMYhwAylZGiIFAMMA0bLbXn0xwWKypBOgk62ucLwU5qt7W5EQUho_Jj-QKuE_l6A1j425ZAh3P-gISwwIKvnjCRanAxkvWkKvmQdrk7055ZGtGKtxpckh0P9osJhM6S6REUhgXTPIi8LfGiWi_f_-pPxcjazU4Gy4GktPlldWInayABjTLQvJ-Bnj-2oOe2xze870d_AdyNwSfEeUKlT5nEQQNhL2kn4j7IiLVOreDEvHzTM9rqFn"/>
+<img className="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a bright, contemporary classroom at Colégio Henriques. Students are engaged in a collaborative project using high-end laptops and tactile learning tools. The architecture features large floor-to-ceiling windows letting in soft, natural daylight. The atmosphere is academic, professional, and inspiring, with a clean corporate aesthetic and high-key lighting." src="/logo.png"/>
 </div>
 {/*  Content  */}
 <div className="relative z-20 max-w-container-max-width mx-auto px-6 md:px-margin-desktop w-full">
@@ -121,7 +121,7 @@ export default function Home() {
 {/*  Main News Item  */}
 <div className="group cursor-pointer">
 <div className="overflow-hidden rounded-lg mb-4">
-<img className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality editorial photograph showing students participating in a national robotics competition. The focus is on a group of young learners collaborating over a complex mechanical project with expressions of concentration and joy. The lighting is crisp and modern, reflecting the technological theme. The background is a blurred high-tech lab environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0CO_nj8w1vTNzL5LG6RpGM5QJHkpgvfzzXQqN5xAVz3oyNQbazPUzULBzULzwEQ16MxU2szABFkFqVJmM4U6adR2VzYgc78bUruaxps9p1XrQd3iV5EZyIcEmcPtZOd3GcXPOnmqXz6qSnnhMyBqUYE9QIQyDJN178J7JPTUXsxgHfOOW0TSmH-Xyx-W5fHtdohqvBE84xWtigOrZC9TF646bw38H4rbnezdrIgkVSCfFukI4Ryh2"/>
+<img className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality editorial photograph showing students participating in a national robotics competition. The focus is on a group of young learners collaborating over a complex mechanical project with expressions of concentration and joy. The lighting is crisp and modern, reflecting the technological theme. The background is a blurred high-tech lab environment." src="/logo.png"/>
 </div>
 <span className="font-label-md text-label-md text-secondary uppercase">Competição Acadêmica</span>
 <h4 className="font-headline-md text-headline-md mt-2 group-hover:text-primary transition-colors">Alunos do Henriques conquistam ouro na Olimpíada Nacional de Robótica</h4>
@@ -130,7 +130,7 @@ export default function Home() {
 {/*  List News Item  */}
 <div className="flex gap-4 items-start border-t border-outline-variant pt-6 group cursor-pointer">
 <div className="w-24 h-24 flex-shrink-0 rounded overflow-hidden">
-<img className="w-full h-full object-cover" data-alt="An atmospheric photo of the school library during a quiet study session. Warm lighting highlights neat rows of academic books and students reading at ergonomic wooden tables. The professional and serene mood emphasizes intellectual focus and academic excellence in a corporate-educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpUr-1AW2c9qL-8MVrMPpp_Yu-1XAdQNlHZuL7PCaTz1hPb4Rxay88eGe3dvi53w7OYjvzRxGYC2G-0riAJarSkIia4O5caaUK2XsNeV86QeQQKD9v5M74hCMld0AtMVTaGS5rVgAxs6XTioD1dCk0yoYZvRYu35mmE-ySkMFcN1pFT3ZnS656xr6dujxcy5NDaU6GWHi736iXVxOisPCmaKnw2tOjGTu6_8VKJpVeDAQlU75UET05"/>
+<img className="w-full h-full object-cover" data-alt="An atmospheric photo of the school library during a quiet study session. Warm lighting highlights neat rows of academic books and students reading at ergonomic wooden tables. The professional and serene mood emphasizes intellectual focus and academic excellence in a corporate-educational setting." src="/logo.png"/>
 </div>
 <div>
 <span className="font-caption text-caption text-on-surface-variant">12 de Outubro, 2024</span>
@@ -202,7 +202,7 @@ export default function Home() {
 </div>
 {/*  Decorative subtle pattern  */}
 <div className="absolute top-0 right-0 opacity-5 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
-<img className="w-[600px] h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvE2bNNg8Lsa1_-qhnf8xSlxiKZdb_Soj-RUR1u1uhy2XDfNZ_td1IGh8URgrH-A5FUDeShJ2AnxiuPHizrM9vw9OkY3XsEefGD1ZBTTnGfTAZ9OLWr8MQgWhb-RQ4WeJopV-hMeLzavgU1oRmscMOgqkiImXTcvEfW435TTJq80mzCbZJ4oEVdeLzPM-qi-VOk-Wus96mgJjX8vUjUjGjnLEk0rENMWZ4xUUOkUSgKCgrbclIiwBcT-fSll7LBRmhbQ"/>
+<img className="w-[600px] h-auto" src="/logo.png"/>
 </div>
 </section>
 {/*  Footer  */}
@@ -211,7 +211,7 @@ export default function Home() {
 {/*  Brand Column  */}
 <div className="col-span-1 md:col-span-1">
 <div className="flex items-center gap-2 mb-6">
-<img alt="Footer Logo" className="h-10 w-auto invert brightness-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi-tuPvepEFW-b1Vo2UUDEaQUhwzBmukj5JJHTfKmbiU9qAhbELdCcqjXze8xcPeWQcW8tMADGhjNMsCFEbnZiLY_wo08WMI9Yi_gq57eywPsvhJ84pvePuoMO99VtihCvNpngh-Q7i4O6cCEpcX0bzbTBByGUpqvJbLpGrPYFj9wrfoTTMeURx21NBF9awFG5ohEVaVFNp2EmiReOrf_s6REhnDmcHTTVojeQj7gsYMNMRsajGWY0rJPhOMCkSCqCsQ"/>
+<img alt="Footer Logo" className="h-10 w-auto invert brightness-0" src="/logo.png"/>
 <span className="font-display-lg text-headline-md">Henriques</span>
 </div>
 <p className="font-body-md text-body-md opacity-80 leading-relaxed mb-6">
