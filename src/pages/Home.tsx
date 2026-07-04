@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Calendar, Share2, Globe, Lightbulb, MapPin, Menu, Phone, Search, Send, MessageSquare, Users, PlayCircle } from 'lucide-react';
 
 
@@ -14,11 +15,11 @@ export default function Home() {
 <span className="font-display-lg text-headline-md font-bold text-primary hidden sm:block">Colégio Henriques</span>
 </div>
 <nav className="hidden lg:flex items-center gap-8">
-<a className="text-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">Início</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Sobre Nós</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Níveis Académicos</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Admissões</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contactos</a>
+<Link className="text-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" to="/">Início</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/sobre-nos">Sobre Nós</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/niveis-academicos">Níveis Académicos</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/contactos">Admissões</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/contactos">Contactos</Link>
 </nav>
 <div className="flex items-center gap-4">
 <button className="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded font-label-md text-label-md hover:opacity-90 transition-all active:scale-95">
@@ -112,10 +113,10 @@ export default function Home() {
 <span className="font-label-md text-label-md text-primary tracking-widest uppercase mb-2 block">Atualidades</span>
 <h2 className="font-headline-lg text-headline-lg text-primary">Últimas Notícias</h2>
 </div>
-<a className="text-primary font-semibold flex items-center gap-1 group" href="#">
+<Link className="text-primary font-semibold flex items-center gap-1 group" to="/">
                             Ver tudo
                             <ArrowRight className="text-[18px] group-hover:translate-x-1 transition-transform" />
-</a>
+</Link>
 </div>
 <div className="space-y-6">
 {/*  Main News Item  */}
@@ -227,21 +228,21 @@ export default function Home() {
 <div>
 <h6 className="font-label-md text-label-md font-bold mb-6 uppercase tracking-wider">Institucional</h6>
 <ul className="space-y-4">
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Institutional Privacy</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Term of Use</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Campus Map</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Accessibility</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Work with Us</a></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Institutional Privacy</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Term of Use</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Campus Map</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Accessibility</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Work with Us</Link></li>
 </ul>
 </div>
 {/*  Links Column 2  */}
 <div>
 <h6 className="font-label-md text-label-md font-bold mb-6 uppercase tracking-wider">Acadêmico</h6>
 <ul className="space-y-4">
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Ensino Fundamental</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Ensino Médio</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Atividades Extracurriculares</a></li>
-<li><a className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" href="#">Intercâmbio</a></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Ensino Fundamental</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Ensino Médio</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Atividades Extracurriculares</Link></li>
+<li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/">Intercâmbio</Link></li>
 </ul>
 </div>
 {/*  Contact/Newsletter Column  */}

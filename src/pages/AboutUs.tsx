@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight, Eye, Share2, Globe, Mail, Quote, Search, ShieldCheck, Target } from 'lucide-react';
 
 
@@ -13,11 +14,11 @@ export default function AboutUs() {
                 Colégio Henriques
             </div>
 <div className="hidden md:flex gap-8 items-center">
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Início</a>
-<a className="text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">Sobre Nós</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Níveis Académicos</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissões</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Contactos</a>
+<Link className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/">Início</Link>
+<Link className="text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" to="/sobre-nos">Sobre Nós</Link>
+<Link className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/niveis-academicos">Níveis Académicos</Link>
+<Link className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/contactos">Admissões</Link>
+<Link className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/contactos">Contactos</Link>
 </div>
 <div className="flex items-center gap-4">
 <div className="hidden lg:flex items-center gap-2">
@@ -190,15 +191,15 @@ export default function AboutUs() {
 </div>
 <div className="flex flex-col gap-4">
 <h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Institutional</h5>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Institutional Privacy</a>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Term of Use</a>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Work with Us</a>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Institutional Privacy</Link>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Term of Use</Link>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Work with Us</Link>
 </div>
 <div className="flex flex-col gap-4">
 <h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Campus</h5>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Campus Map</a>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Accessibility</a>
-<a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Gallery</a>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Campus Map</Link>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Accessibility</Link>
+<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Gallery</Link>
 </div>
 <div className="flex flex-col gap-4">
 <h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Contactos</h5>

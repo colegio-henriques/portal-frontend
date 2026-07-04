@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ArrowRight, Baby, BookOpen, Camera, Share2, FlaskConical, Globe, GraduationCap, Mail, Search } from 'lucide-react';
 
 
@@ -13,11 +14,11 @@ export default function AcademicLevels() {
                 Colégio Henriques
             </div>
 <div className="hidden md:flex items-center gap-8">
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Início</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Sobre Nós</a>
-<a className="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1" href="#">Níveis Académicos</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissões</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Contactos</a>
+<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/">Início</Link>
+<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/sobre-nos">Sobre Nós</Link>
+<Link className="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1" to="/niveis-academicos">Níveis Académicos</Link>
+<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/contactos">Admissões</Link>
+<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/contactos">Contactos</Link>
 </div>
 <div className="flex items-center gap-4">
 <Globe className="text-on-surface-variant cursor-pointer hover:text-primary" />
@@ -45,10 +46,10 @@ export default function AcademicLevels() {
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
                     Um ambiente lúdico e seguro onde o brincar é a base para as primeiras descobertas. Focamos no desenvolvimento socioemocional e cognitivo por meio de projetos integrados.
                 </p>
-<a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
+<Link className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" to="/">
                     Saiba Mais
                     <ArrowRight className="text-sm" />
-</a>
+</Link>
 </div>
 {/*  Ensino Fundamental I  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
@@ -59,10 +60,10 @@ export default function AcademicLevels() {
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
                     Consolidação da alfabetização e desenvolvimento do raciocínio lógico. Estimulamos a autonomia e a curiosidade intelectual em um currículo rico e diversificado.
                 </p>
-<a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
+<Link className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" to="/">
                     Saiba Mais
                     <ArrowRight className="text-sm" />
-</a>
+</Link>
 </div>
 {/*  Ensino Fundamental II  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
@@ -73,10 +74,10 @@ export default function AcademicLevels() {
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
                     Fase de transição com foco no aprofundamento das competências críticas. Incentivamos a investigação científica e a construção de uma consciência social sólida.
                 </p>
-<a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
+<Link className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" to="/">
                     Saiba Mais
                     <ArrowRight className="text-sm" />
-</a>
+</Link>
 </div>
 {/*  Ensino Médio  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
@@ -87,10 +88,10 @@ export default function AcademicLevels() {
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
                     Preparação rigorosa para os desafios universitários e para a vida. Itinerários formativos flexíveis que permitem ao aluno protagonizar seu próprio futuro acadêmico.
                 </p>
-<a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
+<Link className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" to="/">
                     Saiba Mais
                     <ArrowRight className="text-sm" />
-</a>
+</Link>
 </div>
 </section>
 {/*  Featured Curriculum Image (Editorial Feel)  */}
@@ -138,17 +139,17 @@ export default function AcademicLevels() {
 <div>
 <h5 className="font-label-md text-label-md text-secondary-fixed mb-6">Institucional</h5>
 <ul className="space-y-4 font-body-md text-body-md text-on-primary-container dark:text-surface-variant">
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Institutional Privacy</a></li>
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Term of Use</a></li>
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Campus Map</a></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Institutional Privacy</Link></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Term of Use</Link></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Campus Map</Link></li>
 </ul>
 </div>
 <div>
 <h5 className="font-label-md text-label-md text-secondary-fixed mb-6">Explore</h5>
 <ul className="space-y-4 font-body-md text-body-md text-on-primary-container dark:text-surface-variant">
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Accessibility</a></li>
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Work with Us</a></li>
-<li><a className="hover:text-secondary-fixed transition-colors duration-200" href="#">Admission Process</a></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Accessibility</Link></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Work with Us</Link></li>
+<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Admission Process</Link></li>
 </ul>
 </div>
 <div>
