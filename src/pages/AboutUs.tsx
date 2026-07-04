@@ -1,3 +1,4 @@
+import { ArrowRight, Eye, Share2, Globe, Mail, Quote, Search, ShieldCheck, Target } from 'lucide-react';
 
 
 export default function AboutUs() {
@@ -20,8 +21,8 @@ export default function AboutUs() {
 </div>
 <div className="flex items-center gap-4">
 <div className="hidden lg:flex items-center gap-2">
-<span className="material-symbols-outlined text-primary">language</span>
-<span className="material-symbols-outlined text-primary">search</span>
+<Globe className="text-primary" />
+<Search className="text-primary" />
 </div>
 <button className="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all active:scale-95">
                     Student Portal
@@ -59,10 +60,10 @@ export default function AboutUs() {
 </div>
 <div className="relative">
 <div className="rounded-xl overflow-hidden shadow-sm aspect-[4/5]">
-<img className="w-full h-full object-cover" data-alt="A vintage-toned black and white photograph of a classroom from 1985, showing a teacher engaged with students around a wooden desk. The image is crisp and professional, presented as a historical artifact. It is framed with a clean white border and sits elegantly within the modern UI, providing a contrast between past heritage and current sophistication." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="A vintage-toned black and white photograph of a classroom from 1985, showing a teacher engaged with students around a wooden desk. The image is crisp and professional, presented as a historical artifact. It is framed with a clean white border and sits elegantly within the modern UI, providing a contrast between past heritage and current sophistication." src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-xl overflow-hidden border-8 border-white shadow-lg hidden md:block">
-<img className="w-full h-full object-cover" data-alt="A modern close-up detail of the school's contemporary architecture, showing the intersection of glass and steel under soft morning light. The image captures the texture of the building and symbolizes the growth and modernization of the institution since its founding." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="A modern close-up detail of the school's contemporary architecture, showing the intersection of glass and steel under soft morning light. The image captures the texture of the building and symbolizes the growth and modernization of the institution since its founding." src="https://images.unsplash.com/photo-1580894732444-8ec09b3c4fc8?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 </div>
 </div>
@@ -79,7 +80,7 @@ export default function AboutUs() {
 {/*  Missão  */}
 <div className="bento-card p-8 bg-white border border-outline-variant rounded-xl flex flex-col h-full">
 <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
-<span className="material-symbols-outlined text-primary">target</span>
+<Target className="text-primary" />
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Missão</h3>
 <p className="font-body-md text-body-md text-on-surface-variant">Promover uma educação de excelência que potencialize as capacidades individuais, preparando estudantes para atuar com autonomia e responsabilidade na sociedade.</p>
@@ -87,7 +88,7 @@ export default function AboutUs() {
 {/*  Visão  */}
 <div className="bento-card p-8 bg-primary text-on-primary rounded-xl flex flex-col h-full">
 <div className="w-12 h-12 rounded-full bg-on-primary-fixed flex items-center justify-center mb-6">
-<span className="material-symbols-outlined text-secondary-fixed">visibility</span>
+<Eye className="text-secondary-fixed" />
 </div>
 <h3 className="font-headline-md text-headline-md text-white mb-4">Visão</h3>
 <p className="font-body-md text-body-md text-on-primary-container">Ser reconhecido como o colégio líder em inovação pedagógica e formação de lideranças éticas em todo o território nacional até 2030.</p>
@@ -95,7 +96,7 @@ export default function AboutUs() {
 {/*  Valores (Asymmetric height)  */}
 <div className="bento-card p-8 bg-secondary-container border border-outline-variant rounded-xl flex flex-col h-full">
 <div className="w-12 h-12 rounded-full bg-on-secondary-fixed flex items-center justify-center mb-6">
-<span className="material-symbols-outlined text-secondary-fixed-dim">verified_user</span>
+<ShieldCheck className="text-secondary-fixed-dim" />
 </div>
 <h3 className="font-headline-md text-headline-md text-on-secondary-fixed mb-4">Valores</h3>
 <ul className="space-y-3 font-body-md text-body-md text-on-secondary-fixed-variant">
@@ -115,14 +116,14 @@ export default function AboutUs() {
 <div className="lg:col-span-2">
 <div className="sticky top-32">
 <div className="rounded-xl overflow-hidden aspect-square shadow-xl mb-6">
-<img className="w-full h-full object-cover" data-alt="A professional portrait of the school's Director, a distinguished individual in business-casual attire, standing within a modern, sunlit office environment. The background shows blurred bookshelves and academic awards, conveying authority, approachability, and deep expertise in educational leadership. High-key lighting emphasizes clarity and professionalism." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="A professional portrait of the school's Director, a distinguished individual in business-casual attire, standing within a modern, sunlit office environment. The background shows blurred bookshelves and academic awards, conveying authority, approachability, and deep expertise in educational leadership. High-key lighting emphasizes clarity and professionalism." src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 <h4 className="font-headline-md text-headline-md text-primary">Dr. Henrique Silva</h4>
 <p className="font-label-md text-label-md text-on-surface-variant">Diretor Geral &amp; Fundador</p>
 </div>
 </div>
 <div className="lg:col-span-3">
-<span className="material-symbols-outlined text-primary text-6xl opacity-20 block mb-4">format_quote</span>
+<Quote className="text-primary text-6xl opacity-20 block mb-4" />
 <h2 className="font-headline-lg text-headline-lg text-primary mb-8">Mensagem da Direção</h2>
 <div className="font-body-lg text-body-lg text-on-surface-variant space-y-6 italic leading-relaxed">
 <p>"Educar não é apenas transmitir conhecimento, mas despertar em cada aluno a vontade de aprender e a capacidade de transformar a sua realidade. No Colégio Henriques, acreditamos que cada criança e jovem carrega um potencial infinito."</p>
@@ -146,25 +147,25 @@ export default function AboutUs() {
 <p className="font-body-md text-body-md text-on-surface-variant">Espaços projetados para o máximo aproveitamento pedagógico.</p>
 </div>
 <button className="hidden md:flex items-center gap-2 text-primary font-label-md text-label-md hover:underline decoration-2 underline-offset-4">
-                        Ver Campus Completo <span className="material-symbols-outlined">arrow_right_alt</span>
+                        Ver Campus Completo <ArrowRight />
 </button>
 </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 <div className="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
-<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An expansive view of a modern, high-tech science laboratory within the school. It features clean white surfaces, state-of-the-art equipment, and students working in pairs. The lighting is clinical yet inviting, emphasizing the school's focus on research and scientific rigor. The overall aesthetic is professional and modern." src="/logo.png"/>
+<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An expansive view of a modern, high-tech science laboratory within the school. It features clean white surfaces, state-of-the-art equipment, and students working in pairs. The lighting is clinical yet inviting, emphasizing the school's focus on research and scientific rigor. The overall aesthetic is professional and modern." src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=1200"/>
 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div className="absolute bottom-4 left-4 text-white font-label-md text-label-md bg-primary/60 px-3 py-1 rounded backdrop-blur-sm">Laboratórios de Ponta</div>
 </div>
 <div className="rounded-xl overflow-hidden relative group">
-<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A warm and inviting school library with floor-to-ceiling bookshelves, comfortable seating areas, and soft ambient lighting. Large windows let in natural light, creating a serene environment for reading and study. The color palette includes rich wood tones and the primary navy blue of the brand." src="/logo.png"/>
+<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A warm and inviting school library with floor-to-ceiling bookshelves, comfortable seating areas, and soft ambient lighting. Large windows let in natural light, creating a serene environment for reading and study. The color palette includes rich wood tones and the primary navy blue of the brand." src="https://images.unsplash.com/photo-1546410531-bea5a1de47d2?auto=format&fit=crop&q=80&w=1200"/>
 <div className="absolute bottom-4 left-4 text-white font-label-md text-label-md bg-primary/60 px-3 py-1 rounded backdrop-blur-sm">Biblioteca Central</div>
 </div>
 <div className="rounded-xl overflow-hidden relative group">
-<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional-grade indoor sports complex or gymnasium with polished wooden floors and bright lighting. The space is clean, organized, and reflects the institution's commitment to physical well-being and sportsmanship. High-end athletic equipment is visible in the background." src="/logo.png"/>
+<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional-grade indoor sports complex or gymnasium with polished wooden floors and bright lighting. The space is clean, organized, and reflects the institution's commitment to physical well-being and sportsmanship. High-end athletic equipment is visible in the background." src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1200"/>
 <div className="absolute bottom-4 left-4 text-white font-label-md text-label-md bg-primary/60 px-3 py-1 rounded backdrop-blur-sm">Complexo Desportivo</div>
 </div>
 <div className="col-span-2 rounded-xl overflow-hidden h-48 relative group">
-<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An outdoor recreational area or green campus space with modern seating, landscaped gardens, and students interacting. The lighting is golden hour sunlight, giving a warm and friendly feel to the academic environment. It highlights the school as a community hub." src="/logo.png"/>
+<img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An outdoor recreational area or green campus space with modern seating, landscaped gardens, and students interacting. The lighting is golden hour sunlight, giving a warm and friendly feel to the academic environment. It highlights the school as a community hub." src="https://images.unsplash.com/photo-1427504361089-06b943849749?auto=format&fit=crop&q=80&w=1200"/>
 <div className="absolute bottom-4 left-4 text-white font-label-md text-label-md bg-primary/60 px-3 py-1 rounded backdrop-blur-sm">Áreas Verdes</div>
 </div>
 </div>
@@ -182,9 +183,9 @@ export default function AboutUs() {
                     Educação de excelência para um mundo em constante evolução.
                 </p>
 <div className="flex gap-4 mt-8">
-<span className="material-symbols-outlined text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors">face_nod</span>
-<span className="material-symbols-outlined text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors">public</span>
-<span className="material-symbols-outlined text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors">mail</span>
+<Share2 className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
+<Globe className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
+<Mail className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
 </div>
 </div>
 <div className="flex flex-col gap-4">

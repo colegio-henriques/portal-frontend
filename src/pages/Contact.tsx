@@ -1,3 +1,4 @@
+import { AtSign, Camera, Share2, Globe, Mail, Map, MapPin, Navigation, Phone, Search, Send, MessageSquare } from 'lucide-react';
 
 
 export default function Contact() {
@@ -21,10 +22,10 @@ export default function Contact() {
 </div>
 <div className="flex items-center gap-4">
 <button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<span className="material-symbols-outlined">language</span>
+<Globe />
 </button>
 <button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<span className="material-symbols-outlined">search</span>
+<Search />
 </button>
 <a className="bg-primary text-on-primary px-6 py-2.5 font-label-md text-label-md rounded hover:bg-primary-container transition-all active:scale-95" href="#">Portal do Aluno</a>
 </div>
@@ -80,7 +81,7 @@ export default function Contact() {
 </div>
 <button className="bg-primary text-on-primary px-10 py-4 font-label-md text-label-md rounded hover:bg-primary-container transition-all flex items-center gap-3" type="submit">
                                 Send Message
-                                <span className="material-symbols-outlined">send</span>
+                                <Send />
 </button>
 </form>
 </div>
@@ -90,7 +91,7 @@ export default function Contact() {
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
 <div className="bg-surface-container p-8 border border-outline-variant rounded-lg group hover:border-primary transition-colors">
 <div className="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 text-on-primary">
-<span className="material-symbols-outlined">location_on</span>
+<MapPin />
 </div>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Our Campus</h3>
 <p className="font-body-md text-on-surface-variant">Rua Dr. António Henriques, 450<br/>3000-041 Coimbra, Portugal</p>
@@ -98,7 +99,7 @@ export default function Contact() {
 </div>
 <div className="bg-surface-container p-8 border border-outline-variant rounded-lg group hover:border-primary transition-colors">
 <div className="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 text-on-primary">
-<span className="material-symbols-outlined">call</span>
+<Phone />
 </div>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Call Us</h3>
 <div className="space-y-1">
@@ -108,7 +109,7 @@ export default function Contact() {
 </div>
 <div className="bg-surface-container p-8 border border-outline-variant rounded-lg group hover:border-primary transition-colors">
 <div className="w-12 h-12 bg-primary flex items-center justify-center rounded mb-6 text-on-primary">
-<span className="material-symbols-outlined">mail</span>
+<Mail />
 </div>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Email Inquiries</h3>
 <p className="font-body-md text-on-surface-variant">info@henriques.edu.pt</p>
@@ -139,7 +140,7 @@ export default function Contact() {
 <div className="absolute inset-0 grayscale opacity-80" data-location="Coimbra, Portugal" >
 {/*  Map Integration Placeholder  */}
 <div className="w-full h-full flex flex-col items-center justify-center bg-surface-container-high border-y border-outline-variant">
-<span className="material-symbols-outlined text-outline text-6xl mb-4">map</span>
+<Map className="text-outline text-6xl mb-4" />
 <p className="font-headline-md text-on-surface-variant">Interactive Campus Map</p>
 <p className="font-body-md text-outline">Map Location: Coimbra, Portugal</p>
 <div className="mt-6 flex gap-4">
@@ -153,8 +154,8 @@ export default function Contact() {
 <p className="font-label-md text-primary mb-2">Main Office</p>
 <p className="font-body-md text-on-surface">Rua Dr. António Henriques, 450<br/>3000-041 Coimbra</p>
 <div className="mt-4 pt-4 border-t border-outline-variant flex gap-4 text-primary">
-<span className="material-symbols-outlined cursor-pointer hover:opacity-70">directions</span>
-<span className="material-symbols-outlined cursor-pointer hover:opacity-70">share</span>
+<Navigation className="cursor-pointer hover:opacity-70" />
+<MessageSquare className="cursor-pointer hover:opacity-70" />
 </div>
 </div>
 </section>
@@ -191,9 +192,9 @@ export default function Contact() {
 <h4 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-6">Connect</h4>
 <div className="flex gap-4 mb-6">
 {/*  Social icons already styled in main section, repeated here for consistency  */}
-<span className="material-symbols-outlined text-on-primary-container cursor-pointer hover:text-secondary-fixed">face_nod</span>
-<span className="material-symbols-outlined text-on-primary-container cursor-pointer hover:text-secondary-fixed">photo_camera</span>
-<span className="material-symbols-outlined text-on-primary-container cursor-pointer hover:text-secondary-fixed">alternate_email</span>
+<Share2 className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
+<Camera className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
+<AtSign className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
 </div>
 <p className="text-on-primary-container text-label-md italic">Subscribe to our newsletter for campus updates.</p>
 </div>

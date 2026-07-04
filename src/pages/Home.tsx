@@ -1,3 +1,4 @@
+import { ArrowRight, Award, Calendar, Share2, Globe, Lightbulb, MapPin, Menu, Phone, Search, Send, MessageSquare, Users, PlayCircle } from 'lucide-react';
 
 
 export default function Home() {
@@ -24,9 +25,9 @@ export default function Home() {
                     Student Portal
                 </button>
 <div className="flex items-center gap-2 text-on-surface-variant">
-<span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">language</span>
-<span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">search</span>
-<span className="material-symbols-outlined lg:hidden cursor-pointer" id="mobile-menu-toggle">menu</span>
+<Globe className="cursor-pointer hover:text-primary transition-colors" />
+<Search className="cursor-pointer hover:text-primary transition-colors" />
+<Menu className="lg:hidden cursor-pointer" />
 </div>
 </div>
 </div>
@@ -36,7 +37,7 @@ export default function Home() {
 {/*  Background Image with Overlay  */}
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent z-10"></div>
-<img className="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a bright, contemporary classroom at Colégio Henriques. Students are engaged in a collaborative project using high-end laptops and tactile learning tools. The architecture features large floor-to-ceiling windows letting in soft, natural daylight. The atmosphere is academic, professional, and inspiring, with a clean corporate aesthetic and high-key lighting." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a bright, contemporary classroom at Colégio Henriques. Students are engaged in a collaborative project using high-end laptops and tactile learning tools. The architecture features large floor-to-ceiling windows letting in soft, natural daylight. The atmosphere is academic, professional, and inspiring, with a clean corporate aesthetic and high-key lighting." src="https://images.unsplash.com/photo-1427504361089-06b943849749?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 {/*  Content  */}
 <div className="relative z-20 max-w-container-max-width mx-auto px-6 md:px-margin-desktop w-full">
@@ -50,7 +51,7 @@ export default function Home() {
 <div className="flex flex-col sm:flex-row gap-4">
 <button className="px-8 py-4 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded font-bold hover:bg-secondary transition-all flex items-center justify-center gap-2 group">
                         Conheça nosso Campus
-                        <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
 </button>
 <button className="px-8 py-4 border border-on-primary text-on-primary font-label-md text-label-md rounded hover:bg-on-primary hover:text-primary transition-all flex items-center justify-center">
                         Processo Seletivo 2025
@@ -70,7 +71,7 @@ export default function Home() {
 {/*  Excellence  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+<Award className="text-primary" />
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Excellence</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -80,7 +81,7 @@ export default function Home() {
 {/*  Innovation  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>lightbulb</span>
+<Lightbulb className="text-secondary" />
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Innovation</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -90,7 +91,7 @@ export default function Home() {
 {/*  Humanism  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>groups</span>
+<Users className="text-tertiary" />
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Humanism</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -113,14 +114,14 @@ export default function Home() {
 </div>
 <a className="text-primary font-semibold flex items-center gap-1 group" href="#">
                             Ver tudo
-                            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            <ArrowRight className="text-[18px] group-hover:translate-x-1 transition-transform" />
 </a>
 </div>
 <div className="space-y-6">
 {/*  Main News Item  */}
 <div className="group cursor-pointer">
 <div className="overflow-hidden rounded-lg mb-4">
-<img className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality editorial photograph showing students participating in a national robotics competition. The focus is on a group of young learners collaborating over a complex mechanical project with expressions of concentration and joy. The lighting is crisp and modern, reflecting the technological theme. The background is a blurred high-tech lab environment." src="/logo.png"/>
+<img className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality editorial photograph showing students participating in a national robotics competition. The focus is on a group of young learners collaborating over a complex mechanical project with expressions of concentration and joy. The lighting is crisp and modern, reflecting the technological theme. The background is a blurred high-tech lab environment." src="https://images.unsplash.com/photo-1523240795639-2c65a4e37f2a?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 <span className="font-label-md text-label-md text-secondary uppercase">Competição Acadêmica</span>
 <h4 className="font-headline-md text-headline-md mt-2 group-hover:text-primary transition-colors">Alunos do Henriques conquistam ouro na Olimpíada Nacional de Robótica</h4>
@@ -129,7 +130,7 @@ export default function Home() {
 {/*  List News Item  */}
 <div className="flex gap-4 items-start border-t border-outline-variant pt-6 group cursor-pointer">
 <div className="w-24 h-24 flex-shrink-0 rounded overflow-hidden">
-<img className="w-full h-full object-cover" data-alt="An atmospheric photo of the school library during a quiet study session. Warm lighting highlights neat rows of academic books and students reading at ergonomic wooden tables. The professional and serene mood emphasizes intellectual focus and academic excellence in a corporate-educational setting." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="An atmospheric photo of the school library during a quiet study session. Warm lighting highlights neat rows of academic books and students reading at ergonomic wooden tables. The professional and serene mood emphasizes intellectual focus and academic excellence in a corporate-educational setting." src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 <div>
 <span className="font-caption text-caption text-on-surface-variant">12 de Outubro, 2024</span>
@@ -141,7 +142,7 @@ export default function Home() {
 {/*  Events (Stick Column)  */}
 <div className="bg-primary p-10 rounded-xl text-on-primary self-start">
 <h3 className="font-headline-md text-headline-md mb-8 flex items-center gap-2">
-<span className="material-symbols-outlined">calendar_month</span>
+<Calendar />
                         Próximos Eventos
                     </h3>
 <div className="space-y-8">
@@ -201,7 +202,7 @@ export default function Home() {
 </div>
 {/*  Decorative subtle pattern  */}
 <div className="absolute top-0 right-0 opacity-5 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
-<img className="w-[600px] h-auto" src="/logo.png"/>
+<img className="w-[600px] h-auto" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1200"/>
 </div>
 </section>
 {/*  Footer  */}
@@ -217,9 +218,9 @@ export default function Home() {
                     Proporcionando excelência em educação desde 1985. Formando líderes com base sólida e valores humanos.
                 </p>
 <div className="flex gap-4">
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">face_nod</span>
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">play_circle</span>
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">share</span>
+<Share2 className="cursor-pointer hover:text-secondary-fixed transition-colors" />
+<PlayCircle className="cursor-pointer hover:text-secondary-fixed transition-colors" />
+<MessageSquare className="cursor-pointer hover:text-secondary-fixed transition-colors" />
 </div>
 </div>
 {/*  Links Column 1  */}
@@ -247,11 +248,11 @@ export default function Home() {
 <div>
 <h6 className="font-label-md text-label-md font-bold mb-6 uppercase tracking-wider">Contato</h6>
 <p className="font-body-md text-body-md opacity-80 mb-4 flex items-start gap-2">
-<span className="material-symbols-outlined text-[20px]">location_on</span>
+<MapPin className="text-[20px]" />
                     Av. da Educação, 1985<br/>Bairro Acadêmico, SP
                 </p>
 <p className="font-body-md text-body-md opacity-80 mb-6 flex items-center gap-2">
-<span className="material-symbols-outlined text-[20px]">phone</span>
+<Phone className="text-[20px]" />
                     +55 (11) 3456-7890
                 </p>
 <div className="mt-4">
@@ -259,7 +260,7 @@ export default function Home() {
 <div className="flex">
 <input className="bg-primary-container border-none text-white placeholder-on-primary-container px-4 py-2 rounded-l w-full focus:ring-1 focus:ring-secondary-fixed" placeholder="Seu e-mail" type="email"/>
 <button className="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-r">
-<span className="material-symbols-outlined">send</span>
+<Send />
 </button>
 </div>
 </div>

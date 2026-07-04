@@ -1,3 +1,4 @@
+import { ArrowRight, Baby, BookOpen, Camera, Share2, FlaskConical, Globe, GraduationCap, Mail, Search } from 'lucide-react';
 
 
 export default function AcademicLevels() {
@@ -19,8 +20,8 @@ export default function AcademicLevels() {
 <a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Contactos</a>
 </div>
 <div className="flex items-center gap-4">
-<span className="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">language</span>
-<span className="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">search</span>
+<Globe className="text-on-surface-variant cursor-pointer hover:text-primary" />
+<Search className="text-on-surface-variant cursor-pointer hover:text-primary" />
 <button className="hidden lg:block bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95">Portal do Aluno</button>
 </div>
 </div>
@@ -38,7 +39,7 @@ export default function AcademicLevels() {
 {/*  Educação Infantil  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-secondary transition-transform">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>child_care</span>
+<Baby />
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Educação Infantil</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -46,13 +47,13 @@ export default function AcademicLevels() {
                 </p>
 <a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
                     Saiba Mais
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <ArrowRight className="text-sm" />
 </a>
 </div>
 {/*  Ensino Fundamental I  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-6 text-primary transition-transform">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>menu_book</span>
+<BookOpen />
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Fundamental I</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -60,13 +61,13 @@ export default function AcademicLevels() {
                 </p>
 <a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
                     Saiba Mais
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <ArrowRight className="text-sm" />
 </a>
 </div>
 {/*  Ensino Fundamental II  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-6 text-tertiary transition-transform">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>science</span>
+<FlaskConical />
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Fundamental II</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -74,13 +75,13 @@ export default function AcademicLevels() {
                 </p>
 <a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
                     Saiba Mais
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <ArrowRight className="text-sm" />
 </a>
 </div>
 {/*  Ensino Médio  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center mb-6 text-on-secondary-fixed transition-transform">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
+<GraduationCap />
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Médio</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -88,14 +89,14 @@ export default function AcademicLevels() {
                 </p>
 <a className="inline-flex items-center gap-2 font-label-md text-secondary group-hover:gap-4 transition-all" href="#">
                     Saiba Mais
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <ArrowRight className="text-sm" />
 </a>
 </div>
 </section>
 {/*  Featured Curriculum Image (Editorial Feel)  */}
 <section className="mt-24">
 <div className="relative overflow-hidden rounded-xl aspect-[21/9]">
-<img className="w-full h-full object-cover" data-alt="A bright and airy classroom scene in an elite academic institution. Natural sunlight pours through large windows onto modern minimalist furniture. A small group of diverse students in professional school uniforms are engaged in a collaborative project using high-end technology and traditional books. The color palette is dominated by professional navy and warm gold accents, reflecting a sense of stability, focus, and premium educational quality." src="/logo.png"/>
+<img className="w-full h-full object-cover" data-alt="A bright and airy classroom scene in an elite academic institution. Natural sunlight pours through large windows onto modern minimalist furniture. A small group of diverse students in professional school uniforms are engaged in a collaborative project using high-end technology and traditional books. The color palette is dominated by professional navy and warm gold accents, reflecting a sense of stability, focus, and premium educational quality." src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=1200"/>
 <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent flex items-center px-12">
 <div className="max-w-md text-on-primary">
 <h2 className="font-headline-lg text-headline-lg mb-4">Nossa Metodologia</h2>
@@ -157,9 +158,9 @@ export default function AcademicLevels() {
                     São Paulo, SP
                 </p>
 <div className="flex gap-4">
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">face_nod</span>
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">camera</span>
-<span className="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">mail</span>
+<Share2 className="cursor-pointer hover:text-secondary-fixed transition-colors" />
+<Camera className="cursor-pointer hover:text-secondary-fixed transition-colors" />
+<Mail className="cursor-pointer hover:text-secondary-fixed transition-colors" />
 </div>
 </div>
 </div>
