@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 export default function Contact() {
   return (
@@ -42,7 +41,7 @@ export default function Contact() {
 </div>
 </div>
 <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
-<svg className="h-full w-full" viewbox="0 0 100 100">
+<svg className="h-full w-full" viewBox="0 0 100 100">
 <path className="text-primary" d="M0,0 L100,0 L100,100 L0,100 Z" fill="currentColor"></path>
 </svg>
 </div>
@@ -58,11 +57,11 @@ export default function Contact() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="name">Full Name</label>
-<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="name" placeholder="John Doe" required="" type="text"/>
+<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="name" placeholder="John Doe" required type="text"/>
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="email">Email Address</label>
-<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="email" placeholder="john@example.com" required="" type="email"/>
+<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="email" placeholder="john@example.com" required type="email"/>
 </div>
 </div>
 <div className="space-y-2">
@@ -77,7 +76,7 @@ export default function Contact() {
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="message">Your Message</label>
-<textarea className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="message" placeholder="How can we help you today?" required="" rows="5"></textarea>
+<textarea className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="message" placeholder="How can we help you today?" required rows={5}></textarea>
 </div>
 <button className="bg-primary text-on-primary px-10 py-4 font-label-md text-label-md rounded hover:bg-primary-container transition-all flex items-center gap-3" type="submit">
                                 Send Message
@@ -121,13 +120,13 @@ export default function Contact() {
 <h3 className="font-headline-md text-headline-md mb-6">Join our Social Community</h3>
 <div className="flex gap-4">
 <a className="w-10 h-10 border border-on-primary/30 flex items-center justify-center rounded hover:bg-white hover:text-primary transition-all" href="#">
-<svg className="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"></path></svg>
+<svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"></path></svg>
 </a>
 <a className="w-10 h-10 border border-on-primary/30 flex items-center justify-center rounded hover:bg-white hover:text-primary transition-all" href="#">
-<svg className="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0.01,4.85,0.07c3.25,0.15,4.77,1.69,4.92,4.92c0.06,1.27,0.07,1.65,0.07,4.85s-0.01,3.58-0.07,4.85 c-0.15,3.23-1.66,4.77-4.92,4.92c-1.27,0.06-1.64,0.07-4.85,0.07s-3.58-0.01-4.85-0.07c-3.26-0.15-4.77-1.7-4.92-4.92 c-0.06-1.27-0.07-1.64-0.07-4.85s0.01-3.58,0.07-4.85c0.15-3.23,1.66-4.77,4.92-4.92C8.42,2.17,8.8,2.16,12,2.16 M12,0.5 c-3.26,0-3.67,0.01-4.95,0.07C3.16,0.76,0.76,3.16,0.57,7.05C0.51,8.33,0.5,8.74,0.5,12s0.01,3.67,0.07,4.95 c0.19,3.89,2.59,6.29,6.48,6.48c1.28,0.06,1.69,0.07,4.95,0.07s3.67-0.01,4.95-0.07c3.89-0.19,6.29-2.59,6.48-6.48 c0.06-1.28,0.07-1.69,0.07-4.95s-0.01-3.67-0.07-4.95c-0.19-3.89-2.59-6.29-6.48-6.48C15.67,0.51,15.26,0.5,12,0.5L12,0.5z M12,5.83 c-3.41,0-6.17,2.76-6.17,6.17s2.76,6.17,6.17,6.17s6.17-2.76,6.17-6.17S15.41,5.83,12,5.83z M12,16.5c-2.49,0-4.5-2.01-4.5-4.5 s2.01-4.5,4.5-4.5s4.5,2.01,4.5,4.5S14.49,16.5,12,16.5z M18.41,4.15c-0.9,0-1.62,0.73-1.62,1.62s0.73,1.62,1.62,1.62 s1.62-0.73,1.62-1.62S19.31,4.15,18.41,4.15z"></path></svg>
+<svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58,0.01,4.85,0.07c3.25,0.15,4.77,1.69,4.92,4.92c0.06,1.27,0.07,1.65,0.07,4.85s-0.01,3.58-0.07,4.85 c-0.15,3.23-1.66,4.77-4.92,4.92c-1.27,0.06-1.64,0.07-4.85,0.07s-3.58-0.01-4.85-0.07c-3.26-0.15-4.77-1.7-4.92-4.92 c-0.06-1.27-0.07-1.64-0.07-4.85s0.01-3.58,0.07-4.85c0.15-3.23,1.66-4.77,4.92-4.92C8.42,2.17,8.8,2.16,12,2.16 M12,0.5 c-3.26,0-3.67,0.01-4.95,0.07C3.16,0.76,0.76,3.16,0.57,7.05C0.51,8.33,0.5,8.74,0.5,12s0.01,3.67,0.07,4.95 c0.19,3.89,2.59,6.29,6.48,6.48c1.28,0.06,1.69,0.07,4.95,0.07s3.67-0.01,4.95-0.07c3.89-0.19,6.29-2.59,6.48-6.48 c0.06-1.28,0.07-1.69,0.07-4.95s-0.01-3.67-0.07-4.95c-0.19-3.89-2.59-6.29-6.48-6.48C15.67,0.51,15.26,0.5,12,0.5L12,0.5z M12,5.83 c-3.41,0-6.17,2.76-6.17,6.17s2.76,6.17,6.17,6.17s6.17-2.76,6.17-6.17S15.41,5.83,12,5.83z M12,16.5c-2.49,0-4.5-2.01-4.5-4.5 s2.01-4.5,4.5-4.5s4.5,2.01,4.5,4.5S14.49,16.5,12,16.5z M18.41,4.15c-0.9,0-1.62,0.73-1.62,1.62s0.73,1.62,1.62,1.62 s1.62-0.73,1.62-1.62S19.31,4.15,18.41,4.15z"></path></svg>
 </a>
 <a className="w-10 h-10 border border-on-primary/30 flex items-center justify-center rounded hover:bg-white hover:text-primary transition-all" href="#">
-<svg className="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M23.95,4.57c-0.88,0.39-1.83,0.65-2.82,0.77c1.02-0.61,1.8-1.58,2.17-2.73c-0.95,0.56-2.01,0.97-3.14,1.19 c-0.9-0.96-2.18-1.56-3.6-1.56c-2.72,0-4.93,2.21-4.93,4.93c0,0.39,0.04,0.76,0.13,1.13c-4.1-0.21-7.73-2.17-10.16-5.15 c-0.42,0.73-0.67,1.58-0.67,2.48c0,1.71,0.87,3.22,2.19,4.1c-0.81-0.03-1.56-0.25-2.23-0.61c0,0.02,0,0.04,0,0.07 c0,2.39,1.7,4.38,3.95,4.83c-0.41,0.11-0.85,0.17-1.3,0.17c-0.32,0-0.63-0.03-0.93-0.09c0.63,1.96,2.45,3.38,4.6,3.42 c-1.68,1.32-3.8,2.1-6.1,2.1c-0.4,0-0.79-0.02-1.18-0.07c2.18,1.4,4.76,2.21,7.55,2.21c9.05,0,14-7.5,14-14 c0-0.21,0-0.43-0.01-0.64C22.48,6.42,23.3,5.56,23.95,4.57z"></path></svg>
+<svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.95,4.57c-0.88,0.39-1.83,0.65-2.82,0.77c1.02-0.61,1.8-1.58,2.17-2.73c-0.95,0.56-2.01,0.97-3.14,1.19 c-0.9-0.96-2.18-1.56-3.6-1.56c-2.72,0-4.93,2.21-4.93,4.93c0,0.39,0.04,0.76,0.13,1.13c-4.1-0.21-7.73-2.17-10.16-5.15 c-0.42,0.73-0.67,1.58-0.67,2.48c0,1.71,0.87,3.22,2.19,4.1c-0.81-0.03-1.56-0.25-2.23-0.61c0,0.02,0,0.04,0,0.07 c0,2.39,1.7,4.38,3.95,4.83c-0.41,0.11-0.85,0.17-1.3,0.17c-0.32,0-0.63-0.03-0.93-0.09c0.63,1.96,2.45,3.38,4.6,3.42 c-1.68,1.32-3.8,2.1-6.1,2.1c-0.4,0-0.79-0.02-1.18-0.07c2.18,1.4,4.76,2.21,7.55,2.21c9.05,0,14-7.5,14-14 c0-0.21,0-0.43-0.01-0.64C22.48,6.42,23.3,5.56,23.95,4.57z"></path></svg>
 </a>
 </div>
 </div>
@@ -137,7 +136,7 @@ export default function Contact() {
 </section>
 {/*  Map Section  */}
 <section className="w-full h-[500px] bg-surface-container relative">
-<div className="absolute inset-0 grayscale opacity-80" data-location="Coimbra, Portugal" style="">
+<div className="absolute inset-0 grayscale opacity-80" data-location="Coimbra, Portugal" >
 {/*  Map Integration Placeholder  */}
 <div className="w-full h-full flex flex-col items-center justify-center bg-surface-container-high border-y border-outline-variant">
 <span className="material-symbols-outlined text-outline text-6xl mb-4">map</span>

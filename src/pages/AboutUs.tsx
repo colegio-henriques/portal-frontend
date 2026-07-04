@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 export default function AboutUs() {
   return (
@@ -34,7 +33,7 @@ export default function AboutUs() {
 {/*  Hero Section  */}
 <header className="relative h-[614px] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<div className="w-full h-full bg-cover bg-center opacity-40" data-alt="A cinematic wide-angle photograph of the modern architectural facade of a premium educational institution. The building features clean lines, expansive glass windows reflecting a clear blue sky, and pristine white stone surfaces. The lighting is bright and airy, typical of a high-end light-mode corporate aesthetic, evoking a sense of stability, heritage, and academic excellence." style="background-image: url('/logo.png')"></div>
+<div className="w-full h-full bg-cover bg-center opacity-40" data-alt="A cinematic wide-angle photograph of the modern architectural facade of a premium educational institution. The building features clean lines, expansive glass windows reflecting a clear blue sky, and pristine white stone surfaces. The lighting is bright and airy, typical of a high-end light-mode corporate aesthetic, evoking a sense of stability, heritage, and academic excellence." style={{ backgroundImage: "url('/logo.png')" }}></div>
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-container-max-width mx-auto px-margin-desktop w-full">

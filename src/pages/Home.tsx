@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 export default function Home() {
   return (
@@ -71,7 +70,7 @@ export default function Home() {
 {/*  Excellence  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Excellence</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -81,7 +80,7 @@ export default function Home() {
 {/*  Innovation  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>lightbulb</span>
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Innovation</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -91,7 +90,7 @@ export default function Home() {
 {/*  Humanism  */}
 <div className="p-10 bg-white border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div className="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-full mb-8 group-hover:scale-110 transition-transform">
-<span className="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span className="material-symbols-outlined text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>groups</span>
 </div>
 <h3 className="font-headline-md text-headline-md mb-4 text-primary">Humanism</h3>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">

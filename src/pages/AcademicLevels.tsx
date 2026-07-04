@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 export default function AcademicLevels() {
   return (
@@ -39,7 +38,7 @@ export default function AcademicLevels() {
 {/*  Educação Infantil  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-6 text-secondary transition-transform">
-<span className="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">child_care</span>
+<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>child_care</span>
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Educação Infantil</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -53,7 +52,7 @@ export default function AcademicLevels() {
 {/*  Ensino Fundamental I  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-6 text-primary transition-transform">
-<span className="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>menu_book</span>
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Fundamental I</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -67,7 +66,7 @@ export default function AcademicLevels() {
 {/*  Ensino Fundamental II  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center mb-6 text-tertiary transition-transform">
-<span className="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">science</span>
+<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>science</span>
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Fundamental II</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
@@ -81,7 +80,7 @@ export default function AcademicLevels() {
 {/*  Ensino Médio  */}
 <div className="academic-card group flex flex-col bg-surface-container-lowest border border-outline-variant p-8 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,53,106,0.04)] hover:border-primary/20">
 <div className="card-icon w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center mb-6 text-on-secondary-fixed transition-transform">
-<span className="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+<span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
 </div>
 <h3 className="font-headline-md text-headline-md text-primary mb-4">Ensino Médio</h3>
 <p className="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
