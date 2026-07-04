@@ -13,11 +13,11 @@ export default function Contact() {
 </div>
 {/*  Desktop Links  */}
 <div className="hidden lg:flex items-center gap-8">
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">About</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Academic Levels</a>
-<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissions</a>
-<a className="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1" href="#">Contact</a>
+<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Início</a>
+<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Sobre Nós</a>
+<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Níveis Académicos</a>
+<a className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissões</a>
+<a className="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1" href="#">Contactos</a>
 </div>
 <div className="flex items-center gap-4">
 <button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
@@ -26,7 +26,7 @@ export default function Contact() {
 <button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
 <span className="material-symbols-outlined">search</span>
 </button>
-<a className="bg-primary text-on-primary px-6 py-2.5 font-label-md text-label-md rounded hover:bg-primary-container transition-all active:scale-95" href="#">Student Portal</a>
+<a className="bg-primary text-on-primary px-6 py-2.5 font-label-md text-label-md rounded hover:bg-primary-container transition-all active:scale-95" href="#">Portal do Aluno</a>
 </div>
 </nav>
 </header>
@@ -57,11 +57,11 @@ export default function Contact() {
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="name">Full Name</label>
-<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="name" placeholder="John Doe" required type="text"/>
+<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="name" placeholder="João Silva" required type="text"/>
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="email">Email Address</label>
-<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="email" placeholder="john@example.com" required type="email"/>
+<input className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="email" placeholder="joao.silva@exemplo.pt" required type="email"/>
 </div>
 </div>
 <div className="space-y-2">
@@ -76,7 +76,7 @@ export default function Contact() {
 </div>
 <div className="space-y-2">
 <label className="font-label-md text-label-md text-on-surface-variant" htmlFor="message">Your Message</label>
-<textarea className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="message" placeholder="How can we help you today?" required rows={5}></textarea>
+<textarea className="w-full bg-white border border-outline-variant px-4 py-3 rounded focus:outline-none focus:border-primary form-focus-glow transition-all" id="message" placeholder="Como o podemos ajudar hoje?" required rows={5}></textarea>
 </div>
 <button className="bg-primary text-on-primary px-10 py-4 font-label-md text-label-md rounded hover:bg-primary-container transition-all flex items-center gap-3" type="submit">
                                 Send Message
@@ -171,10 +171,10 @@ export default function Contact() {
 <div>
 <h4 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-6">Quick Links</h4>
 <ul className="space-y-4">
-<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Home</a></li>
-<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">About Us</a></li>
+<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Início</a></li>
+<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Sobre Nós</a></li>
 <li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Curriculum</a></li>
-<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Admissions</a></li>
+<li><a className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" href="#">Admissões</a></li>
 </ul>
 </div>
 <div>

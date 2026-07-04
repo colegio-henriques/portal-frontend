@@ -13,11 +13,11 @@ export default function Home() {
 <span className="font-display-lg text-headline-md font-bold text-primary hidden sm:block">Colégio Henriques</span>
 </div>
 <nav className="hidden lg:flex items-center gap-8">
-<a className="text-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">Home</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Academic Levels</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Admissions</a>
-<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+<a className="text-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">Início</a>
+<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Sobre Nós</a>
+<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Níveis Académicos</a>
+<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Admissões</a>
+<a className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Contactos</a>
 </nav>
 <div className="flex items-center gap-4">
 <button className="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded font-label-md text-label-md hover:opacity-90 transition-all active:scale-95">

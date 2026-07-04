@@ -12,11 +12,11 @@ export default function AboutUs() {
                 Colégio Henriques
             </div>
 <div className="hidden md:flex gap-8 items-center">
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Home</a>
-<a className="text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">About</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Academic Levels</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissions</a>
-<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Contact</a>
+<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Início</a>
+<a className="text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" href="#">Sobre Nós</a>
+<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Níveis Académicos</a>
+<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Admissões</a>
+<a className="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Contactos</a>
 </div>
 <div className="flex items-center gap-4">
 <div className="hidden lg:flex items-center gap-2">
@@ -200,7 +200,7 @@ export default function AboutUs() {
 <a className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" href="#">Gallery</a>
 </div>
 <div className="flex flex-col gap-4">
-<h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Contact</h5>
+<h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Contactos</h5>
 <p className="font-label-md text-label-md text-on-primary-container">Rua das Letras, 1985<br/>Lisboa, Portugal</p>
 <p className="font-label-md text-label-md text-on-primary-container">+351 210 000 000</p>
 <p className="font-label-md text-label-md text-on-primary-container">geral@henriques.pt</p>
