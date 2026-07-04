@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Eye, Share2, Globe, Mail, Quote, Search, ShieldCheck, Target } from 'lucide-react';
-
+import { ArrowRight, Eye, Globe, Quote, Search, ShieldCheck, Target } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function AboutUs() {
   return (
@@ -33,17 +34,7 @@ export default function AboutUs() {
 </nav>
 <main>
 {/*  Hero Section  */}
-<header className="relative h-[614px] flex items-center overflow-hidden">
-<div className="absolute inset-0 z-0">
-<div className="w-full h-full bg-cover bg-center opacity-40" data-alt="A cinematic wide-angle photograph of the modern architectural facade of a premium educational institution. The building features clean lines, expansive glass windows reflecting a clear blue sky, and pristine white stone surfaces. The lighting is bright and airy, typical of a high-end light-mode corporate aesthetic, evoking a sense of stability, heritage, and academic excellence." style={{ backgroundImage: "url('/logo.png')" }}></div>
-<div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
-</div>
-<div className="relative z-10 max-w-container-max-width mx-auto px-margin-desktop w-full">
-<span className="text-primary font-label-md text-label-md tracking-widest uppercase mb-4 block">Excelência em Educação</span>
-<h1 className="font-display-lg text-display-lg text-primary max-w-2xl mb-6">Tradição que inspira o futuro.</h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Desde 1985, o Colégio Henriques dedica-se a formar cidadãos conscientes, críticos e preparados para os desafios de um mundo globalizado.</p>
-</div>
-</header>
+<Navbar />
 {/*  Nossa História Section  */}
 <section className="py-24 bg-white">
 <div className="max-w-container-max-width mx-auto px-margin-desktop">
@@ -174,47 +165,7 @@ export default function AboutUs() {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="bg-primary dark:bg-on-primary-fixed full-width">
-<div className="w-full py-16 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max-width mx-auto">
-<div className="col-span-1 md:col-span-1">
-<div className="font-display-lg text-headline-md text-on-primary dark:text-inverse-primary mb-6">
-                    Colégio Henriques
-                </div>
-<p className="font-body-md text-body-md text-on-primary-container opacity-80">
-                    Educação de excelência para um mundo em constante evolução.
-                </p>
-<div className="flex gap-4 mt-8">
-<Share2 className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
-<Globe className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
-<Mail className="text-on-primary cursor-pointer hover:text-secondary-fixed transition-colors" />
-</div>
-</div>
-<div className="flex flex-col gap-4">
-<h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Institutional</h5>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Institutional Privacy</Link>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Term of Use</Link>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Work with Us</Link>
-</div>
-<div className="flex flex-col gap-4">
-<h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Campus</h5>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Campus Map</Link>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Accessibility</Link>
-<Link className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed transition-colors duration-200" to="/">Gallery</Link>
-</div>
-<div className="flex flex-col gap-4">
-<h5 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-2">Contactos</h5>
-<p className="font-label-md text-label-md text-on-primary-container">Rua das Letras, 1985<br/>Lisboa, Portugal</p>
-<p className="font-label-md text-label-md text-on-primary-container">+351 210 000 000</p>
-<p className="font-label-md text-label-md text-on-primary-container">geral@henriques.pt</p>
-</div>
-</div>
-<div className="max-w-container-max-width mx-auto px-margin-desktop py-8 border-t border-on-primary-container/20">
-<p className="font-label-md text-label-md text-on-primary-container opacity-60 text-center md:text-left">
-                © 2024 Colégio Henriques. All rights reserved. Providing excellence in education since 1985.
-            </p>
-</div>
-</footer>
-
+<Footer />
 
       </main>
     </div>

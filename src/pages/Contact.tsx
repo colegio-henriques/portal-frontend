@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { AtSign, Camera, Share2, Globe, Mail, Map, MapPin, Navigation, Phone, Search, Send, MessageSquare } from 'lucide-react';
-
+import { Mail, Map, MapPin, Navigation, Phone, Send, MessageSquare } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Contact() {
   return (
@@ -8,30 +9,7 @@ export default function Contact() {
       <main>
         
 {/*  TopNavBar  */}
-<header className="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline docked full-width top-0 sticky z-50">
-<nav className="max-w-container-max-width mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
-<div className="flex items-center gap-3">
-<span className="font-display-lg text-headline-md font-bold text-primary dark:text-inverse-primary leading-tight">Colégio Henriques</span>
-</div>
-{/*  Desktop Links  */}
-<div className="hidden lg:flex items-center gap-8">
-<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/">Início</Link>
-<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/sobre-nos">Sobre Nós</Link>
-<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/niveis-academicos">Níveis Académicos</Link>
-<Link className="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" to="/contactos">Admissões</Link>
-<Link className="font-label-md text-label-md text-primary dark:text-inverse-primary border-b-2 border-primary font-semibold pb-1" to="/contactos">Contactos</Link>
-</div>
-<div className="flex items-center gap-4">
-<button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<Globe />
-</button>
-<button className="hidden md:flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-<Search />
-</button>
-<Link className="bg-primary text-on-primary px-6 py-2.5 font-label-md text-label-md rounded hover:bg-primary-container transition-all active:scale-95" to="/login">Portal do Aluno</Link>
-</div>
-</nav>
-</header>
+<Navbar />
 <main className="min-h-screen">
 {/*  Hero Section  */}
 <section className="relative py-24 bg-surface-container-low overflow-hidden">
@@ -162,51 +140,7 @@ export default function Contact() {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="bg-primary dark:bg-on-primary-fixed full-width">
-<div className="max-w-container-max-width mx-auto py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div className="col-span-1 md:col-span-1">
-<span className="font-display-lg text-headline-md text-on-primary dark:text-inverse-primary block mb-6">Colégio Henriques</span>
-<p className="text-on-primary-container dark:text-on-surface-variant font-body-md leading-relaxed">
-                    Excellence in education since 1985. Shaping the minds of future leaders through rigorous academics and character building.
-                </p>
-</div>
-<div>
-<h4 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-6">Quick Links</h4>
-<ul className="space-y-4">
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Início</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/sobre-nos">Sobre Nós</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Curriculum</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/contactos">Admissões</Link></li>
-</ul>
-</div>
-<div>
-<h4 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-6">Support</h4>
-<ul className="space-y-4">
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Institutional Privacy</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Term of Use</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Campus Map</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Accessibility</Link></li>
-<li><Link className="text-on-primary-container dark:text-on-surface-variant hover:text-secondary-fixed transition-colors duration-200 font-label-md" to="/">Work with Us</Link></li>
-</ul>
-</div>
-<div>
-<h4 className="text-on-primary font-label-md text-label-md uppercase tracking-wider mb-6">Connect</h4>
-<div className="flex gap-4 mb-6">
-{/*  Social icons already styled in main section, repeated here for consistency  */}
-<Share2 className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
-<Camera className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
-<AtSign className="text-on-primary-container cursor-pointer hover:text-secondary-fixed" />
-</div>
-<p className="text-on-primary-container text-label-md italic">Subscribe to our newsletter for campus updates.</p>
-</div>
-</div>
-<div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/10 text-center">
-<p className="text-on-primary-container text-caption opacity-70">
-                © 2024 Colégio Henriques. All rights reserved. Providing excellence in education since 1985.
-            </p>
-</div>
-</footer>
-
+<Footer />
 
       </main>
     </div>

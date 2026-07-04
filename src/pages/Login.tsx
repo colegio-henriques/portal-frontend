@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 export default function Login() {
   const navigate = useNavigate();
-  const [isRegistering, setIsRegistering] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isRegistering, setIsRegistering] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -53,37 +54,35 @@ export default function Login() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 selection:bg-indigo-500/30">
-      {/* Elementos decorativos */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-96 bg-indigo-500/20 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 blur-[100px] rounded-full pointer-events-none" />
+    <div className="font-sans min-h-screen flex items-center justify-center bg-surface relative overflow-hidden">
+      {/* Background Shapes */}
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-container rounded-full blur-[120px] opacity-40 pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary-container rounded-full blur-[100px] opacity-40 pointer-events-none" />
 
-      {/* Cartão principal */}
-      <div className="relative w-full max-w-md p-8 sm:p-10 mx-4 bg-white/5 border border-white/10 shadow-2xl backdrop-blur-xl rounded-2xl z-10 transition-all duration-300">
+      <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md">
+        <ArrowLeft className="w-5 h-5" />
+        Voltar ao Início
+      </Link>
+
+      <div className="relative w-full max-w-md p-8 bg-surface-container-lowest border border-outline-variant/30 shadow-2xl rounded-3xl z-10">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/30 ring-1 ring-white/20">
-            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white">
-            Colégio Henriques
+          <img src="/logo.png" alt="Colégio Henriques Logo" className="h-16 w-auto mx-auto mb-6" />
+          <h2 className="text-3xl font-display-lg font-bold text-on-surface">
+            {isRegistering ? 'Criar Conta' : 'Portal do Aluno'}
           </h2>
-          <p className="mt-2 text-sm text-slate-400">
-            {isRegistering ? 'Crie a sua conta administrativa.' : 'Aceda ao seu painel académico.'}
+          <p className="mt-2 font-body-md text-on-surface-variant">
+            {isRegistering ? 'Registe-se para aceder ao sistema administrativo.' : 'Aceda à sua área pessoal académica.'}
           </p>
         </div>
 
         {errorMsg && (
-          <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm text-center">
+          <div className="mb-6 p-4 bg-error-container text-on-error-container rounded-xl font-body-md border border-error/20 text-center">
             {errorMsg}
           </div>
         )}
         
         {successMsg && (
-          <div className="mb-4 p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-400 text-sm text-center">
+          <div className="mb-6 p-4 bg-tertiary-container/30 text-on-surface rounded-xl font-body-md border border-tertiary/20 text-center">
             {successMsg}
           </div>
         )}
@@ -92,47 +91,47 @@ export default function Login() {
           {isRegistering && (
             <div className="flex gap-4">
               <div className="flex-1">
-                <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="firstName">Nome</label>
+                <label className="block font-label-md text-on-surface-variant mb-1" htmlFor="firstName">Nome</label>
                 <input
                   id="firstName"
                   type="text"
                   required
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="block w-full px-3 py-2.5 bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="lastName">Apelido</label>
+                <label className="block font-label-md text-on-surface-variant mb-1" htmlFor="lastName">Apelido</label>
                 <input
                   id="lastName"
                   type="text"
                   required
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="block w-full px-3 py-2.5 bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
                 />
               </div>
             </div>
           )}
 
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="email">
-              Email
+            <label className="block font-label-md text-on-surface-variant mb-1" htmlFor="email">
+              Email Institucional
             </label>
             <input
               id="email"
               type="email"
               required
-              placeholder="utilizador@colegiohenriques.edu"
+              placeholder="aluno@colegiohenriques.edu"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-3 py-2.5 bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-1" htmlFor="password">
+            <label className="block font-label-md text-on-surface-variant mb-1" htmlFor="password">
               Palavra-passe
             </label>
             <input
@@ -142,38 +141,38 @@ export default function Login() {
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block w-full px-3 py-2.5 bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
             />
           </div>
 
           {!isRegistering && (
-             <div className="flex items-center justify-between mt-2 text-sm">
-             <div className="flex items-center">
-               <input id="remember" type="checkbox" className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-indigo-500 focus:ring-indigo-500" />
-               <label htmlFor="remember" className="ml-2 text-slate-400">Lembrar-me</label>
+             <div className="flex items-center justify-between mt-2 font-label-md">
+             <div className="flex items-center gap-2">
+               <input id="remember" type="checkbox" className="w-4 h-4 rounded border-outline text-primary focus:ring-primary accent-primary" />
+               <label htmlFor="remember" className="text-on-surface-variant cursor-pointer">Lembrar-me</label>
              </div>
-             <a href="#" className="font-medium text-indigo-400 hover:text-indigo-300">Esqueceu a senha?</a>
+             <a href="#" className="font-semibold text-primary hover:text-primary-container transition-colors">Esqueceu a senha?</a>
            </div>
           )}
 
-          <div className="pt-2">
+          <div className="pt-4">
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-lg shadow-indigo-500/25 transform transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 rounded-xl font-label-md font-semibold transition-all transform active:scale-[0.98] shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'A processar...' : isRegistering ? 'Registar' : 'Iniciar Sessão'}
+              {isLoading ? 'A processar...' : isRegistering ? 'Registar Conta' : 'Iniciar Sessão'}
             </button>
           </div>
         </form>
         
-        <div className="mt-6 text-center text-sm text-slate-400">
+        <div className="mt-8 text-center font-body-md text-on-surface-variant">
           {isRegistering ? 'Já tem uma conta? ' : 'Não tem acesso? '}
           <button 
             onClick={() => setIsRegistering(!isRegistering)}
-            className="font-medium text-indigo-400 hover:text-indigo-300 underline"
+            className="font-semibold text-primary hover:text-primary-container underline transition-colors"
           >
-            {isRegistering ? 'Faça Login' : 'Registar uma conta admin'}
+            {isRegistering ? 'Faça Login aqui' : 'Solicitar acesso administrativo'}
           </button>
         </div>
       </div>

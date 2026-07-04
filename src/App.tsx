@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import AcademicLevels from './pages/AcademicLevels';
 import Contact from './pages/Contact';
+import Admissions from './pages/Admissions';
 
 // Função auxiliar simples para proteger rotas verificando o token
 const ProtectedRoute = ({ children }: { children: ReactNode }) => {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sobre-nos" element={<AboutUs />} />
         <Route path="/niveis-academicos" element={<AcademicLevels />} />
+        <Route path="/admissoes" element={<Admissions />} />
         <Route path="/contactos" element={<Contact />} />
         
         <Route path="/login" element={<Login />} />

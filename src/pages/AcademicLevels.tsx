@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Baby, BookOpen, Camera, Share2, FlaskConical, Globe, GraduationCap, Mail, Search } from 'lucide-react';
-
+import { ArrowRight, Baby, BookOpen, FlaskConical, Globe, GraduationCap, Search } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function AcademicLevels() {
   return (
@@ -29,12 +30,7 @@ export default function AcademicLevels() {
 </nav>
 <main className="max-w-container-max-width mx-auto px-6 md:px-margin-desktop py-16 md:py-24">
 {/*  Hero Section  */}
-<header className="mb-16 md:mb-24">
-<h1 className="font-display-lg text-display-lg mb-6 text-primary">Excelência Acadêmica</h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                No Colégio Henriques, acreditamos que cada fase da vida escolar é uma oportunidade única para o desenvolvimento humano e intelectual. Nossa proposta pedagógica integra tradição e inovação.
-            </p>
-</header>
+<Navbar />
 {/*  Academic Levels Grid (Bento Style)  */}
 <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 {/*  Educação Infantil  */}
@@ -126,52 +122,7 @@ export default function AcademicLevels() {
 </section>
 </main>
 {/*  Footer  */}
-<footer className="w-full bg-primary dark:bg-on-primary-fixed text-on-primary py-16">
-<div className="max-w-container-max-width mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
-<div className="col-span-1 md:col-span-1">
-<div className="font-display-lg text-headline-md text-on-primary dark:text-inverse-primary mb-6">
-                    Colégio Henriques
-                </div>
-<p className="font-body-md text-body-md text-on-primary-container dark:text-surface-variant opacity-80">
-                    Proporcionando excelência em educação desde 1985.
-                </p>
-</div>
-<div>
-<h5 className="font-label-md text-label-md text-secondary-fixed mb-6">Institucional</h5>
-<ul className="space-y-4 font-body-md text-body-md text-on-primary-container dark:text-surface-variant">
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Institutional Privacy</Link></li>
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Term of Use</Link></li>
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Campus Map</Link></li>
-</ul>
-</div>
-<div>
-<h5 className="font-label-md text-label-md text-secondary-fixed mb-6">Explore</h5>
-<ul className="space-y-4 font-body-md text-body-md text-on-primary-container dark:text-surface-variant">
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Accessibility</Link></li>
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Work with Us</Link></li>
-<li><Link className="hover:text-secondary-fixed transition-colors duration-200" to="/">Admission Process</Link></li>
-</ul>
-</div>
-<div>
-<h5 className="font-label-md text-label-md text-secondary-fixed mb-6">Contato</h5>
-<p className="font-body-md text-body-md text-on-primary-container dark:text-surface-variant mb-4">
-                    Av. da Educação, 1200<br/>
-                    São Paulo, SP
-                </p>
-<div className="flex gap-4">
-<Share2 className="cursor-pointer hover:text-secondary-fixed transition-colors" />
-<Camera className="cursor-pointer hover:text-secondary-fixed transition-colors" />
-<Mail className="cursor-pointer hover:text-secondary-fixed transition-colors" />
-</div>
-</div>
-</div>
-<div className="max-w-container-max-width mx-auto px-6 md:px-margin-desktop mt-16 pt-8 border-t border-on-primary/10">
-<p className="font-label-md text-label-md text-on-primary-container dark:text-surface-variant text-center md:text-left">
-                © 2024 Colégio Henriques. All rights reserved. Providing excellence in education since 1985.
-            </p>
-</div>
-</footer>
-
+<Footer />
 
       </main>
     </div>

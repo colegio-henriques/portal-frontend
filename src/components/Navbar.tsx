@@ -1,38 +1,35 @@
-import { Search, Bell } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Globe, Search, Menu } from 'lucide-react';
 
-interface NavbarProps {
-  user: any;
-}
-
-export default function Navbar({ user }: NavbarProps) {
+const Navbar: React.FC = () => {
   return (
-    <header className="h-16 flex items-center justify-between px-8 border-b border-slate-800/50 bg-slate-900/50 backdrop-blur-md z-10">
-      <div className="flex items-center w-96">
-        <div className="relative w-full">
-          <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
-          <input 
-            type="text" 
-            placeholder="Pesquisar alunos, turmas, faturas..." 
-            className="w-full bg-slate-800/50 border border-slate-700/50 text-sm rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all placeholder-slate-500 text-slate-200"
-          />
-        </div>
-      </div>
-
-      <div className="flex items-center space-x-6">
-        <button className="relative text-slate-400 hover:text-slate-200 transition-colors">
-          <Bell size={20} />
-          <span className="absolute -top-1 -right-1 w-2 h-2 bg-rose-500 rounded-full animate-pulse"></span>
-        </button>
-        <div className="flex items-center pl-6 border-l border-slate-800">
-          <div className="text-right mr-3 hidden md:block">
-            <p className="text-sm font-medium text-slate-200">{user?.email || 'Admin'}</p>
-            <p className="text-xs text-slate-500 capitalize">{user?.role || 'Direcção'}</p>
-          </div>
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-500/20 ring-2 ring-slate-800">
-            {user?.email ? user.email.charAt(0).toUpperCase() : 'A'}
-          </div>
-        </div>
-      </div>
-    </header>
+    <header className="docked full-width top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<div className="max-w-container-max-width mx-auto flex justify-between items-center px-6 md:px-margin-desktop py-4">
+<div className="flex items-center gap-4">
+<img alt="Colégio Henriques Logo" className="h-10 w-auto" src="/logo.png"/>
+<span className="font-display-lg text-headline-md font-bold text-primary hidden sm:block">Colégio Henriques</span>
+</div>
+<nav className="hidden lg:flex items-center gap-8">
+<Link className="text-primary border-b-2 border-primary font-semibold pb-1 font-label-md text-label-md" to="/">Início</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/sobre-nos">Sobre Nós</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/niveis-academicos">Níveis Académicos</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/admissoes">Admissões</Link>
+<Link className="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" to="/contactos">Contactos</Link>
+</nav>
+<div className="flex items-center gap-4">
+<button className="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-on-primary rounded font-label-md text-label-md hover:opacity-90 transition-all active:scale-95">
+                    Student Portal
+                </button>
+<div className="flex items-center gap-2 text-on-surface-variant">
+<Globe className="cursor-pointer hover:text-primary transition-colors" />
+<Search className="cursor-pointer hover:text-primary transition-colors" />
+<Menu className="lg:hidden cursor-pointer" />
+</div>
+</div>
+</div>
+</header>
   );
-}
+};
+
+export default Navbar;
