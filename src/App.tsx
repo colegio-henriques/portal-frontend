@@ -7,6 +7,8 @@ import AboutUs from './pages/AboutUs';
 import AcademicLevels from './pages/AcademicLevels';
 import Contact from './pages/Contact';
 import Admissions from './pages/Admissions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 // Função auxiliar simples para proteger rotas verificando o token
 const ProtectedRoute = ({ children }: { children: ReactNode }) => {
@@ -27,6 +29,8 @@ function App() {
         <Route path="/niveis-academicos" element={<AcademicLevels />} />
         <Route path="/admissoes" element={<Admissions />} />
         <Route path="/contactos" element={<Contact />} />
+        <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+        <Route path="/termos-de-servico" element={<TermsOfService />} />
         
         <Route path="/login" element={<Login />} />
         
