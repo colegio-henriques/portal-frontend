@@ -85,8 +85,8 @@ export default function Contact() {
                     <Mail />
                   </div>
                   <h3 className="font-headline-md text-xl font-bold text-primary mb-2">Endereço Eletrónico</h3>
-                  <p className="font-body-md text-on-surface-variant">geral@colegiohenriques.ed.ao</p>
-                  <p className="font-body-md text-on-surface-variant">admissoes@colegiohenriques.ed.ao</p>
+                  <p className="font-body-md text-on-surface-variant">geral@colegiohenriques.ao</p>
+                  <p className="font-body-md text-on-surface-variant">admissoes@colegiohenriques.ao</p>
                 </div>
               </div>
             </div>

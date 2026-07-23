@@ -123,7 +123,7 @@ export default function Login() {
               id="email"
               type="email"
               required
-              placeholder="estudante@colegiohenriques.ed.ao"
+              placeholder="estudante@colegiohenriques.ao"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
