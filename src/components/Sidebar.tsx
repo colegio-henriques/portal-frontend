@@ -4,12 +4,14 @@ import {
   FileText, 
   LogOut, 
   LayoutDashboard,
-  GraduationCap
+  GraduationCap,
+  ShieldCheck
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     localStorage.removeItem('ch_token');
@@ -18,11 +20,12 @@ export default function Sidebar() {
   };
 
   const navItems = [
-    { icon: LayoutDashboard, label: 'Painel Geral', active: true },
-    { icon: GraduationCap, label: 'Académico', active: false },
-    { icon: Users, label: 'Alunos & Turmas', active: false },
-    { icon: CreditCard, label: 'Financeiro', active: false },
-    { icon: FileText, label: 'Documentos', active: false },
+    { icon: LayoutDashboard, label: 'Painel Geral', path: '/dashboard' },
+    { icon: ShieldCheck, label: 'Permissões (RBAC)', path: '/admin/users' },
+    { icon: GraduationCap, label: 'Académico', path: '/dashboard' },
+    { icon: Users, label: 'Alunos & Turmas', path: '/dashboard' },
+    { icon: CreditCard, label: 'Financeiro', path: '/dashboard' },
+    { icon: FileText, label: 'Documentos', path: '/dashboard' },
   ];
 
   return (
@@ -35,19 +38,23 @@ export default function Sidebar() {
       </div>
 
       <nav className="flex-1 px-4 py-6 space-y-2">
-        {navItems.map((item, index) => (
-          <button
-            key={index}
-            className={`w-full flex items-center px-4 py-3 rounded-xl transition-all duration-200 font-label-md ${
-              item.active 
-                ? 'bg-primary-container text-on-primary-container font-semibold shadow-sm border border-outline-variant/50' 
-                : 'text-on-surface-variant hover:bg-surface-variant hover:text-on-surface'
-            }`}
-          >
-            <item.icon size={20} className="mr-3" />
-            {item.label}
-          </button>
-        ))}
+        {navItems.map((item, index) => {
+          const isActive = location.pathname === item.path;
+          return (
+            <button
+              key={index}
+              onClick={() => navigate(item.path)}
+              className={`w-full flex items-center px-4 py-3 rounded-xl transition-all duration-200 font-label-md ${
+                isActive 
+                  ? 'bg-primary-container text-on-primary-container font-semibold shadow-sm border border-outline-variant/50' 
+                  : 'text-on-surface-variant hover:bg-surface-variant hover:text-on-surface'
+              }`}
+            >
+              <item.icon size={20} className="mr-3" />
+              {item.label}
+            </button>
+          );
+        })}
       </nav>
 
       <div className="p-4 border-t border-outline-variant">

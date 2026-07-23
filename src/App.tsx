@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Admissions from './pages/Admissions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import UserManagement from './pages/UserManagement';
 
 // Função auxiliar simples para proteger rotas verificando o token
 const ProtectedRoute = ({ children }: { children: ReactNode }) => {
@@ -40,6 +41,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          } 
+        />
+
+        <Route 
+          path="/admin/users" 
+          element={
+            <ProtectedRoute>
+              <UserManagement />
             </ProtectedRoute>
           } 
         />
