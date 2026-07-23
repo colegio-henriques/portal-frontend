@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
           <h6 className="font-label-md text-label-md font-bold mb-6 uppercase tracking-wider">Institucional</h6>
           <ul className="space-y-4">
             <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/sobre-nos">Sobre Nós</Link></li>
+            <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/politica-de-privacidade">Política de Privacidade</Link></li>
+            <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/termos-de-servico">Termos de Serviço</Link></li>
             <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/admissoes">Admissões</Link></li>
-            <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/niveis-academicos">Projeto Pedagógico</Link></li>
             <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/contactos">Localização do Campus</Link></li>
-            <li><Link className="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md" to="/login">Portal do Estudante</Link></li>
           </ul>
         </div>
         {/*  Links Column 2  */}
