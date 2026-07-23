@@ -40,7 +40,7 @@ jobs:
           DOCKER_TAG="europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/ch-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}"
           docker build \
             --build-arg VITE_API_URL=https://api-gateway-577474884701.europe-west1.run.app \
-            --build-arg VITE_GOOGLE_CLIENT_ID="${{ secrets.VITE_GOOGLE_CLIENT_ID || '577474884701-colegiohenriques.apps.googleusercontent.com' }}" \
+            --build-arg VITE_GOOGLE_CLIENT_ID="${{ secrets.VITE_GOOGLE_CLIENT_ID || '577474884701-lksbleles09p831tsg20v58dehoghqcl.apps.googleusercontent.com' }}" \
             -t $DOCKER_TAG .
           docker push $DOCKER_TAG
 
