@@ -20,7 +20,9 @@ export default function Login() {
     setSuccessMsg('');
 
     try {
-      const endpoint = isRegistering ? '/auth/register' : '/auth/login';
+      const API_BASE = import.meta.env.VITE_API_URL || '';
+      const path = isRegistering ? '/auth/register' : '/auth/login';
+      const endpoint = `${API_BASE}${path}`;
       const body = isRegistering 
         ? { email, password, first_name: firstName, last_name: lastName, role: 'admin' }
         : { email, password };
