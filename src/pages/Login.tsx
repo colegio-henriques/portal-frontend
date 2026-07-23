@@ -81,9 +81,6 @@ export default function Login() {
                 onSuccess={handleGoogleSuccess}
                 onError={handleGoogleError}
                 useOneTap
-                auto_select
-                allowed_parent_origin={window.location.origin}
-                hosted_domain="colegiohenriques.ao"
                 theme="filled_blue"
                 shape="pill"
                 size="large"
