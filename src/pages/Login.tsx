@@ -1,58 +1,48 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ShieldAlert } from 'lucide-react';
+import { GoogleLogin, type CredentialResponse } from '@react-oauth/google';
 
 export default function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isRegistering, setIsRegistering] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
-  const [successMsg, setSuccessMsg] = useState('');
 
-  const handleAuth = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleGoogleSuccess = async (credentialResponse: CredentialResponse) => {
     setIsLoading(true);
     setErrorMsg('');
-    setSuccessMsg('');
 
     try {
-      const API_BASE = import.meta.env.VITE_API_URL || '';
-      const path = isRegistering ? '/auth/register' : '/auth/login';
-      const endpoint = `${API_BASE}${path}`;
-      const body = isRegistering 
-        ? { email, password, first_name: firstName, last_name: lastName, role: 'admin' }
-        : { email, password };
+      if (!credentialResponse.credential) {
+        throw new Error('Não foi possível obter a credencial do Google.');
+      }
 
-      const response = await fetch(endpoint, {
+      const API_BASE = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${API_BASE}/auth/google`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
+        body: JSON.stringify({ credential: credentialResponse.credential })
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Ocorreu um erro no servidor.');
+        throw new Error(data.error || 'Acesso negado.');
       }
 
-      if (isRegistering) {
-        setSuccessMsg('Conta criada com sucesso! Inicie sessão para continuar.');
-        setIsRegistering(false);
-        setPassword('');
-      } else {
-        localStorage.setItem('ch_token', data.token);
-        localStorage.setItem('ch_user', JSON.stringify(data.user));
-        navigate('/dashboard');
-      }
+      localStorage.setItem('ch_token', data.token);
+      localStorage.setItem('ch_user', JSON.stringify(data.user));
+      navigate('/dashboard');
+
     } catch (err: any) {
-      setErrorMsg(err.message);
+      setErrorMsg(err.message || 'Erro ao autenticar com o Google.');
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleGoogleError = () => {
+    setErrorMsg('Falha ao comunicar com os serviços de autenticação do Google.');
   };
 
   return (
@@ -66,116 +56,47 @@ export default function Login() {
         Voltar ao Início
       </Link>
 
-      <div className="relative w-full max-w-md p-8 md:p-10 bg-surface-container-lowest border border-outline-variant/60 shadow-2xl rounded-3xl z-10 my-12">
-        <div className="text-center mb-8">
-          <img src="/logo.png" alt="Colégio Henriques Logo" className="h-14 w-auto mx-auto mb-4" />
-          <h2 className="text-2xl md:text-3xl font-display-lg font-bold text-primary">
-            {isRegistering ? 'Criar Conta' : 'Portal do Estudante'}
-          </h2>
-          <p className="mt-2 font-body-md text-sm text-on-surface-variant">
-            {isRegistering ? 'Registe-se para aceder à plataforma do colégio.' : 'Aceda à sua área pessoal de gestão académica.'}
-          </p>
-        </div>
+      <div className="relative w-full max-w-md p-8 md:p-10 bg-surface-container-lowest border border-outline-variant/60 shadow-2xl rounded-3xl z-10 my-12 text-center">
+        <img src="/logo.png" alt="Colégio Henriques Logo" className="h-16 w-auto mx-auto mb-4" />
+        <h2 className="text-2xl md:text-3xl font-display-lg font-bold text-primary mb-2">
+          Portal do Estudante
+        </h2>
+        <p className="font-body-md text-sm text-on-surface-variant mb-6 leading-relaxed">
+          Autenticação exclusiva via Google Workspace para contas do domínio <strong className="text-primary">@colegiohenriques.ao</strong>
+        </p>
 
         {errorMsg && (
-          <div className="mb-6 p-4 bg-error-container text-on-error-container rounded-xl font-body-md border border-error/20 text-center text-sm">
-            {errorMsg}
-          </div>
-        )}
-        
-        {successMsg && (
-          <div className="mb-6 p-4 bg-tertiary-container/30 text-on-surface rounded-xl font-body-md border border-tertiary/20 text-center text-sm">
-            {successMsg}
+          <div className="mb-6 p-4 bg-error-container text-on-error-container rounded-2xl font-body-md border border-error/20 text-center text-sm flex items-center gap-3">
+            <ShieldAlert size={20} className="shrink-0 text-error" />
+            <span className="text-left">{errorMsg}</span>
           </div>
         )}
 
-        <form onSubmit={handleAuth} className="space-y-5">
-          {isRegistering && (
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <label className="block font-label-md text-xs font-semibold text-on-surface-variant mb-1" htmlFor="firstName">Nome Próprio</label>
-                <input
-                  id="firstName"
-                  type="text"
-                  required
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
-                />
-              </div>
-              <div className="flex-1">
-                <label className="block font-label-md text-xs font-semibold text-on-surface-variant mb-1" htmlFor="lastName">Apelido</label>
-                <input
-                  id="lastName"
-                  type="text"
-                  required
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
-                />
-              </div>
+        <div className="my-8 flex flex-col items-center justify-center min-h-[50px]">
+          {isLoading ? (
+            <div className="text-primary font-body-md text-sm animate-pulse">A validar a conta...</div>
+          ) : (
+            <div className="w-full flex justify-center">
+              <GoogleLogin
+                onSuccess={handleGoogleSuccess}
+                onError={handleGoogleError}
+                useOneTap
+                auto_select
+                allowed_parent_origin={window.location.origin}
+                hosted_domain="colegiohenriques.ao"
+                theme="filled_blue"
+                shape="pill"
+                size="large"
+                text="signin_with"
+                width="320"
+              />
             </div>
           )}
+        </div>
 
-          <div>
-            <label className="block font-label-md text-xs font-semibold text-on-surface-variant mb-1" htmlFor="email">
-              Correio Eletrónico Institucional
-            </label>
-            <input
-              id="email"
-              type="email"
-              required
-              placeholder="estudante@colegiohenriques.ao"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
-            />
-          </div>
-
-          <div>
-            <label className="block font-label-md text-xs font-semibold text-on-surface-variant mb-1" htmlFor="password">
-              Palavra-passe
-            </label>
-            <input
-              id="password"
-              type="password"
-              required
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-on-surface"
-            />
-          </div>
-
-          {!isRegistering && (
-            <div className="flex items-center justify-between mt-2 font-label-md text-xs">
-              <div className="flex items-center gap-2">
-                <input id="remember" type="checkbox" className="w-4 h-4 rounded border-outline text-primary focus:ring-primary accent-primary" />
-                <label htmlFor="remember" className="text-on-surface-variant cursor-pointer">Lembrar-me</label>
-              </div>
-              <a href="#" className="font-semibold text-primary hover:text-primary-container transition-colors">Esqueceu a palavra-passe?</a>
-            </div>
-          )}
-
-          <div className="pt-2">
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 rounded-xl font-label-md font-semibold transition-all transform active:scale-[0.98] shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
-            >
-              {isLoading ? 'A processar...' : isRegistering ? 'Registar Conta' : 'Iniciar Sessão'}
-            </button>
-          </div>
-        </form>
-        
-        <div className="mt-8 text-center font-body-md text-sm text-on-surface-variant">
-          {isRegistering ? 'Já possui conta? ' : 'Não tem acesso? '}
-          <button 
-            onClick={() => setIsRegistering(!isRegistering)}
-            className="font-semibold text-primary hover:text-primary-container underline transition-colors"
-          >
-            {isRegistering ? 'Iniciar sessão aqui' : 'Solicitar acesso administrativo'}
-          </button>
+        <div className="pt-6 border-t border-outline-variant/40 text-xs text-on-surface-variant leading-relaxed">
+          <p className="font-semibold text-primary mb-1">Nota de Segurança:</p>
+          Apenas contas de correio eletrónico com a extensão <strong>@colegiohenriques.ao</strong> possuem permissão de acesso ao sistema de gestão.
         </div>
       </div>
     </div>
