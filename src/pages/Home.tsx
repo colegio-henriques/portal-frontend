@@ -18,11 +18,14 @@ export default function Home() {
           {/*  Content  */}
           <div className="relative z-20 max-w-container-max-width mx-auto px-6 md:px-margin-desktop w-full py-20">
             <div className="max-w-2xl text-on-primary">
+              <span className="inline-block px-3.5 py-1 bg-secondary-fixed text-on-secondary-fixed text-xs font-bold rounded-full mb-4 uppercase tracking-wider">
+                Aplicação Oficial • Colégio Henriques
+              </span>
               <h1 className="font-display-lg text-4xl md:text-5xl lg:text-display-lg mb-6 leading-tight font-bold">
-                Tradição que Inspira,<br/><span className="text-secondary-fixed">Inovação</span> que Transforma.
+                Plataforma de Gestão Escolar do Colégio Henriques
               </h1>
-              <p className="font-body-lg text-lg md:text-body-lg mb-10 opacity-90 leading-relaxed">
-                No Colégio Henriques, preparamos mentes brilhantes para os desafios globais através de uma educação humanista e tecnológica de excelência em Angola.
+              <p className="font-body-lg text-lg md:text-body-lg mb-8 opacity-90 leading-relaxed">
+                Este portal público permite consultar notícias institucionais, informações de admissão, oferta formativa e aceder ao sistema de gestão escolar integrado com autenticação corporativa Google Workspace (exclusivo para contas @colegiohenriques.ao).
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/sobre-nos" className="px-8 py-4 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-lg font-bold hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-2 group shadow-md">
